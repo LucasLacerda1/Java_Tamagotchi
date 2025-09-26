@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 public class Comer {
-    private ArrayList<String> comidas = new ArrayList<String>();
+    private ArrayList<String> comidas;
 
     public Comer() {
+        comidas = new ArrayList<String>();
+        
         comidas.add("Tutu de camarão");
         comidas.add("Bobó de camarão");
         comidas.add("Risoto de camarão");
@@ -15,5 +17,12 @@ public class Comer {
         comidas.add("Empadão de camarão");
     }
     
-    
+    public void showMenu() {
+        System.out.println("========== Menu de comidas ==========");
+        for (int i = 0; i < comidas.size(); i++) {
+            System.out.println((i + 1) + " - " + comidas.get(i));
+            
+        }
+        System.out.println("======================================");
+    }
 }
