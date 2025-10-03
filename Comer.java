@@ -1,28 +1,29 @@
-import java.util.ArrayList;
-public class Comer {
-    private ArrayList<String> comidas;
+public class Comida {
+    private String nome;
+    private double preco;
+    private int valorEnergia;
+    private int valorSatisfacao;
 
-    public Comer() {
-        comidas = new ArrayList<String>();
-        
-        comidas.add("Tutu de camarão");
-        comidas.add("Bobó de camarão");
-        comidas.add("Risoto de camarão");
-        comidas.add("Camarão na manteiga");
-        comidas.add("Camarão empanado");
-        comidas.add("Strogonofe de camarão");
-        comidas.add("Camarão com molho de queijo");
-        comidas.add("Muqueca com camarão");
-        comidas.add("Lasanha de camarão");
-        comidas.add("Empadão de camarão");
+    public Comida(String nome, double preco, int valorEnergia, int valorSatisfacao) {
+        this.nome = nome;
+        this.preco = preco;
+        this.valorEnergia = valorEnergia;
+        this.valorSatisfacao = valorSatisfacao;
     }
-    
-    public void showMenu() {
-        System.out.println("========== Menu de comidas ==========");
-        for (int i = 0; i < comidas.size(); i++) {
-            System.out.println((i + 1) + " - " + comidas.get(i));
-            
-        }
-        System.out.println("======================================");
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public int getValorEnergia() {
+        return valorEnergia;
+    }
+
+    public int getValorSatisfacao() {
+        return valorSatisfacao;
     }
 }
